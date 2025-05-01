@@ -8,12 +8,12 @@ export default function Slider() {
   let slider = document.querySelector('#slider-container');
  
   function next() {
-    let slidersItems  = document.querySelectorAll('.card');
+    const slidersItems  = document.querySelectorAll('.card');
     slider.appendChild(slidersItems[0])
   }
 
   function prev() {
-    let slidersItems  = document.querySelectorAll('.card');
+    const slidersItems  = document.querySelectorAll('.card');
     slider.prepend(slidersItems[slidersItems.length - 1])
   }
    
