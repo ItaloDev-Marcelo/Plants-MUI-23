@@ -3,6 +3,8 @@ import {Stack, Button} from '@mui/material'
 import Card from '../components/Cards'
 import cardData from '../Data/cardData'
 import { useRef } from 'react';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function Slider() {
 
@@ -30,8 +32,8 @@ export default function Slider() {
       <Stack component='section'  id='slider-container' ref={sliderRef}  position='relative'>
         
         
-          <Button id='btn-left'  onClick={() => next()}>L</Button>
-          <Button id='btn-right' onClick={() => prev()}>R</Button> 
+          <Button id='btn-left'  className='btn' startIcon={<KeyboardArrowLeftIcon   />}  onClick={() => next()}></Button>
+          <Button id='btn-right' className='btn'  startIcon={<KeyboardArrowRightIcon/>}  onClick={() => prev()}></Button> 
         
      
             {

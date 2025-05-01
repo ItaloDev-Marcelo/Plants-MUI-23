@@ -14,13 +14,28 @@
 }
 
 
-body {
+body{
   font-size: 1em;
   background-color: var(--dark--green);
-  
+  width: 100%;
   overflow-x: hidden;
 }
 
+
+.information h3 {
+  color: var(--cyan) !important;
+}
+
+
+#green {
+  color: rgb(53, 236, 53);
+  font-weight: 700;
+}
+
+#c-2 {
+  font-weight: 700;
+  color: var(--cyan); 
+}
 
 #slider-container {
   padding: 2em;
@@ -29,33 +44,67 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 1em;
-
+  width: 375px;
+  overflow: hidden;
 }
+
 
 .card {
   background-color: var(--light--gray);
-  width: 250px;
-  height: 300px;
+  width: 145px ;
+  height: 200px ; 
   border-radius: 7px;
-  margin: 0 1.2em;
+  margin: 0 .5em;
+  flex: 0 0 200px;
 }
 
-.card:first-child {
+.card .information {
+  display: none;
+}
+
+
+.card:nth-of-type(1) {
+  width: 250px ;
+  height: 350px ; 
   margin-left: 0;
 }
 
 
-.card:first-child .image-container >  img {
+.card:nth-of-type(1) .image-container >  img {
   transform: scale(1.5);
   position:relative;
-  top: -35%;
+  top: -12%;
 }
 
+
+.card:nth-of-type(1) h3, .information {
+  position: relative;
+  top: -25%;
+  left: 5%;
+}
+
+.card:nth-of-type(1) .information {
+  display: block;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.Plant-04:nth-of-type(1) .image-container img {
+  transform: scale(2);
+}
+
+.Plant-04:nth-of-type(1)  h3 {
+  margin-top: 1em;
+}
+
+.Plant-04:nth-of-type(1)  .information {
+  margin-top: 2em;
+} 
 
 
 .image-container >  img {
   position:relative;
-  top: -27%;
+  top: -34%;
 }
 
 .card header .image-container img {
@@ -69,22 +118,116 @@ body {
 
 
 
-#slider-btn {
-  width: 100px;
-}
 
-button {
+.btn svg {
   display: block;
   z-index: 1; 
-  background-color: aqua !important;
+  color: #5E9270 ;
+  width: 45px ;
+  height: 45px;
+  outline: 1px solid #fff ;
+  border-radius: 100px ;
+
 }
 
 #btn-left {
   position: absolute;
-  left: 15px;
+  left: 10px;
 }
+
+#btn-left svg,  #btn-right svg{
+  align-self: center;
+ }
 
 #btn-right {
     position: absolute;
-  left:315px;
+  left:295px;
+}
+
+@media (min-width: 393px) {
+  #slider-container {
+    width: 414px;
+  }
+}
+
+@media (min-width: 414px) {
+    
+
+.card {
+  margin: 0 1em;
+}
+
+#btn-right {
+  position: absolute;
+left:350px;
+}
+
+
+}
+
+@media (min-width: 800px)  {
+  #slider-container {
+    width:850px;
+  }
+
+  .card:nth-of-type(1) {
+    min-width: 300px !important ;
+    margin-left: 0;
+  }
+
+  .card:nth-of-type(1) .image-container >  img {
+    transform: scale(1.5);
+    position:relative;
+    top: -2%;
+  }
+
+  #btn-right {
+    position: absolute;
+  left:720px;
+  }
+}
+
+@media (min-width: 950px) {
+  #slider-container {
+    width:100%;
+  }
+
+  #btn-right {
+    position: absolute;
+  left:890px;
+  }
+
+  .Plant-04 .image-container img {
+    transform: scale(2);
+  }
+  
+  .Plant-04 h3 {
+    margin-top: 3em;
+  }
+  
+}
+
+
+@media (min-width: 1024px) {
+  #slider-container {
+    width:100%;
+  }
+
+  #btn-right {
+    position: absolute;
+  left:950px;
+  }
+
+  .Plant-04 .image-container img {
+    transform: scale(2);
+  }
+  
+  .Plant-04 h3 {
+    margin-top: 3em;
+  }
+  
+  .Plant-01 .information {
+    max-width: 250px;
+  }
+
 }
