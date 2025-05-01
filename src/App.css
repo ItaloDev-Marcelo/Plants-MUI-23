@@ -19,7 +19,7 @@ body {
   background-color: var(--dark--green);
 }
 
-body, #slider-container {
+body {
   overflow: hidden;
 }
 
