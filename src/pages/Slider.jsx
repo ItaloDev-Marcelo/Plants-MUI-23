@@ -23,8 +23,8 @@ export default function Slider() {
       <Stack component='section'  id='slider-container'  position='relative'>
         
         
-        <button id='btn-left'  onClick={next}>L</button>
-          <button id='btn-right' onClick={prev}>R</button> 
+          <button id='btn-left'  onClick={()  => next()}>L</button>
+          <button id='btn-right' onClick={()  => prev()}>R</button> 
         
      
             {
