@@ -2,25 +2,32 @@
 import {Stack, Button} from '@mui/material'
 import Card from '../components/Cards'
 import cardData from '../Data/cardData'
+import { useRef } from 'react';
 
 export default function Slider() {
 
-  let slider = document.querySelector('#slider-container');
- 
+  const  sliderRef = useRef(null) ;
+
   function next() {
-    const slidersItems  = document.querySelectorAll('.card');
-    slider.appendChild(slidersItems[0])
+    const slider = sliderRef.current;
+    const items  = slider.querySelectorAll('.card');
+    if (items.length > 0 ) {
+    slider.appendChild(items[0])
+    }
   }
 
   function prev() {
-    const slidersItems  = document.querySelectorAll('.card');
-    slider.prepend(slidersItems[slidersItems.length - 1])
+    const slider = sliderRef.current;
+    const items  = slider.querySelectorAll('.card');
+    if (items.length > 0 ) {
+    slider.prepend(items[items.length - 1])
+    }
   }
    
 
     return (
      
-      <Stack component='section'  id='slider-container'  position='relative'>
+      <Stack component='section'  id='slider-container' ref={sliderRef}  position='relative'>
         
         
           <Button id='btn-left'  onClick={() => next()}>L</Button>
