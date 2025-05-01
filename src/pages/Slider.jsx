@@ -7,12 +7,12 @@ export default function Slider() {
 
   let slider = document.querySelector('#slider-container');
  
-  const next = () => {
+  let next = () => {
     let slidersItems  = document.querySelectorAll('.card');
     slider.appendChild(slidersItems[0])
   }
 
-  const prev = () => {
+  let prev = () => {
     let slidersItems  = document.querySelectorAll('.card');
     slider.prepend(slidersItems[slidersItems.length - 1])
   }

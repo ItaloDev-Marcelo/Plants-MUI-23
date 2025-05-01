@@ -27,6 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 1em;
+  overflow: hidden;
 }
 
 .card {
@@ -71,6 +72,7 @@ body {
 }
 
 button {
+  display: block;
   z-index: 1;
 }
 
