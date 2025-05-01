@@ -17,11 +17,10 @@
 body {
   font-size: 1em;
   background-color: var(--dark--green);
+  
+  overflow-x: hidden;
 }
 
-body {
-  overflow: hidden;
-}
 
 #slider-container {
   padding: 2em;
