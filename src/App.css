@@ -76,7 +76,8 @@ body, #slider-container {
 
 button {
   display: block;
-  z-index: 1;
+  z-index: 1; 
+  background-color: aqua !important;
 }
 
 #btn-left {

@@ -1,5 +1,5 @@
 
-import {Stack} from '@mui/material'
+import {Stack, Button} from '@mui/material'
 import Card from '../components/Cards'
 import cardData from '../Data/cardData'
 
@@ -23,8 +23,8 @@ export default function Slider() {
       <Stack component='section'  id='slider-container'  position='relative'>
         
         
-          <button id='btn-left'  onClick={()  => next()}>L</button>
-          <button id='btn-right' onClick={()  => prev()}>R</button> 
+          <Button id='btn-left'  onClick={next()}>L</Button>
+          <Button id='btn-right' onClick={prev()}>R</Button> 
         
      
             {
