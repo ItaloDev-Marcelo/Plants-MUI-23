@@ -7,12 +7,12 @@ export default function Slider() {
 
   let slider = document.querySelector('#slider-container');
  
-  let next = () => {
+  function next() {
     let slidersItems  = document.querySelectorAll('.card');
     slider.appendChild(slidersItems[0])
   }
 
-  let prev = () => {
+  function prev() {
     let slidersItems  = document.querySelectorAll('.card');
     slider.prepend(slidersItems[slidersItems.length - 1])
   }
@@ -23,8 +23,8 @@ export default function Slider() {
       <Stack component='section'  id='slider-container'  position='relative'>
         
         
-        <button id='btn-left'  onClick={() => next()}>L</button>
-          <button id='btn-right' onClick={() => prev()}>R</button> 
+        <button id='btn-left'  onClick={next}>L</button>
+          <button id='btn-right' onClick={prev}>R</button> 
         
      
             {

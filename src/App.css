@@ -17,6 +17,10 @@
 body {
   font-size: 1em;
   background-color: var(--dark--green);
+  
+}
+
+body, #slider-container {
   overflow: hidden;
 }
 
@@ -27,7 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 1em;
-  overflow: hidden;
+
 }
 
 .card {
