@@ -9,15 +9,15 @@
 
 :root {
   --light--gray: #D9E5E4;
-    --dark--green:rgb(68, 197, 113);
-    /* --dark--green: #5E9270; */
+  
+    --dark--green: #5E9270;
     --cyan: #1A2E35;
 }
 
 
 body{
   font-size: 1em;
-  background-color: var(--dark--green);
+  background-color: var(--light--gray);
   width: 100%;
   overflow-x: hidden;
 }
@@ -39,7 +39,7 @@ body{
 }
 
 #slider-container {
-  padding: 2em;
+  padding: 4em 2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,7 +51,7 @@ body{
 
 
 .card {
-  background-color: var(--light--gray);
+  background-color: #fff;
   width: 145px ;
   height: 200px ; 
   border-radius: 7px;
@@ -68,6 +68,7 @@ body{
   width: 250px ;
   height: 350px ; 
   margin-left: 0;
+  flex: 0 0 275px;
 }
 
 .card:nth-of-type(1) .image-container >  img {
@@ -243,6 +244,9 @@ left:350px;
     margin-left: 10%;
   }
 
+
+  
+
   #home-information {
     position: relative;
     top: 2em;
@@ -258,6 +262,9 @@ left:350px;
   left:1100px;
   }
 
+
+
+   
 
 
   .card {
@@ -280,7 +287,9 @@ left:350px;
     left: 15px;
   }
 
-
+  .Plant-04:nth-of-type(1) .image-container img {
+    transform: scale(2);
+  }
 
 
   
