@@ -245,12 +245,53 @@ left:350px;
 
   #home-information {
     position: relative;
-    left: 37%;
+    top: 2em;
+    left: 42%;
   }
 
   #home-information  h1{
     max-width: 70% !important;
   }
 
+  #btn-right {
+    position: absolute;
+  left:1100px;
+  }
+
+
+
+  .card {
+    margin: 0 1em;
+  }
+  
+  .card .information {
+    display: none;
+  }
+  
+  
+  .card:nth-of-type(1) {
+    transform: scale(1.1);
+    margin-left: 0;
+    margin-right: 4em;
+  }
+
+  #btn-left {
+    position: absolute;
+    left: 15px;
+  }
+
+
+
+
+  
+body, #slider-container {
+ 
+  overflow-x: hidden;
+}
+
+
  
 }
+
+
+
