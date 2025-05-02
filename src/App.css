@@ -9,7 +9,8 @@
 
 :root {
   --light--gray: #D9E5E4;
-    --dark--green: #5E9270;
+    --dark--green:rgb(68, 197, 113);
+    /* --dark--green: #5E9270; */
     --cyan: #1A2E35;
 }
 
@@ -69,13 +70,11 @@ body{
   margin-left: 0;
 }
 
-
 .card:nth-of-type(1) .image-container >  img {
   transform: scale(1.5);
   position:relative;
   top: -12%;
 }
-
 
 .card:nth-of-type(1) h3, .information {
   position: relative;
@@ -116,12 +115,17 @@ body{
   top: -25%;
 }
 
+ .btn:active {
+  transform: scale(1.1);
+}
 
 
+.btn  { 
+  display: block;
+  z-index: 100 !important; 
+}
 
 .btn svg {
-  display: block;
-  z-index: 1; 
   color: #5E9270 ;
   width: 45px ;
   height: 45px;
@@ -230,4 +234,23 @@ left:350px;
     max-width: 250px;
   }
 
+}
+
+
+@media (min-width: 1280px) { 
+    #slider-container {
+    width:1200px;
+    margin-left: 10%;
+  }
+
+  #home-information {
+    position: relative;
+    left: 37%;
+  }
+
+  #home-information  h1{
+    max-width: 70% !important;
+  }
+
+ 
 }
