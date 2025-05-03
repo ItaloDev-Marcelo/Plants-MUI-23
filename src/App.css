@@ -13,6 +13,15 @@ a {
   letter-spacing: 2px !important;
 }
 
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  color: #5E9270;
+}
+
+
 
 :root {
   --light--gray: #D9E5E4;
@@ -22,7 +31,7 @@ a {
 }
 
 
-body{
+body, #root{
   font-size: 1em;
   background-color: var(--light--gray);
   width: 100%;
@@ -330,5 +339,37 @@ body, #slider-container {
  
 }
 
+@media (min-width: 1440px) {
+  body {
+    overflow: hidden;
+  }
 
+  #nav-header {
+    margin-top: 2em;
+    padding: 1.5em;
+    padding-right: 10em !important;
+  }
+
+  #btn-right {
+    position: absolute;
+  left:1300px;
+  }
+
+  #btn-left {
+    position: absolute;
+    left: 10px;
+  }
+
+  a {
+    margin-left: 7em !important;
+  }
+
+
+  .card:nth-of-type(1) {
+    margin-left: 3em;
+    margin-right: 2em;
+  }
+
+ 
+}
 

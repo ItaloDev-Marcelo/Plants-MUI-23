@@ -9,11 +9,12 @@ export default function NavegationTab() {
 
   const [menu, setMenu]  = useState(false)
   const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(25);
+  const [lastScrollY, setLastScrollY] = useState(50);
  
   const controlNavbar = () => {
     if(window.scrollY  > lastScrollY) {
       setShow(false);
+      setMenu(false)
     }else  {
       setShow(true);
     }
@@ -27,6 +28,8 @@ export default function NavegationTab() {
     };
   }, [lastScrollY])
 
+
+
     return (
       <Stack component='header' id='nav-header' sx={{display: show ? 'flex': 'none', 
         flexDirection: 'row',
@@ -34,11 +37,13 @@ export default function NavegationTab() {
       alignContent: {lg: 'flex-end'},
        justifyContent: 'space-between'
        }} >
-          <Link marginLeft={{xs: '.5em', lg: '3.5em'}} fontSize='1.2em'   href='index.html'>Plants</Link>
+          <Link marginLeft={{xs: '.5em', lg: '3.5em'}}
+           fontSize='1.2em'   href='index.html'>Plants</Link>
           <Button sx={{display: {xs:'block', lg:'none'}, position: 'relative', left: {xs: '5em'}}} 
           onClick={ () => setMenu(!menu)} startIcon={menu ? <CloseIcon/> : <MenuIcon/>} >
           </Button>
-          <Stack component='nav' width='800px'  sx={{position: {xs:'absolute', lg: 'relative'},
+          <Stack component='nav' width='800px'  
+          sx={{position: {xs:'absolute', lg: 'relative'},
            top: {xs: '5rem', lg: 0}, left: {xs: 0},
            display: {xs: menu ? 'block' : 'none', lg: 'block'},
            backgroundColor: {xs: '#D9E5E4', lg: 'transparent'},
@@ -48,22 +53,25 @@ export default function NavegationTab() {
               paddingLeft: {xs: '1.2em'},
                flexDirection: {xs: 'column', lg: 'row'},
                alignItems: 'center',
-                justifyContent: {xs: 'center', lg: 'space-between'}}}>
+              justifyContent: {xs: 'center', lg: 'space-between'}
+              }}>
                   <ListItem>Home</ListItem>
                   <ListItem >Plant finder</ListItem>
                   <ListItem>Products</ListItem>
                   <ListItem>About us</ListItem>
                   <ListItem>Contact</ListItem>
                   <ListItem>My Plants</ListItem>
-                  <ListItemButton>
-                     <ListItemIcon>
+                  <ListItem sx={{display: {xs: 'block', lg: 'none'}}}  ><PersonIcon /></ListItem>
+                  <ListItem sx={{display: {xs: 'block', lg: 'none'}}}><ShoppingCartIcon/></ListItem>
+                  <ListItemButton sx={{display: {xs: 'none', lg: 'block'}}}>
+                     
                          <PersonIcon />
-                     </ListItemIcon>
+                     
                   </ListItemButton>
-                  <ListItemButton>
-                     <ListItemIcon>
+                  <ListItemButton sx={{display: {xs: 'none', lg: 'block'}}}>
+               
                           <ShoppingCartIcon/>
-                     </ListItemIcon>
+                
                   </ListItemButton>
               </List>
           </Stack>
