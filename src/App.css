@@ -6,6 +6,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+a {
+  text-decoration: none !important;
+  text-transform: uppercase;
+  color: #1A2E35 !important;
+  letter-spacing: 2px !important;
+}
+
 
 :root {
   --light--gray: #D9E5E4;
@@ -130,7 +137,7 @@ body{
   color: #5E9270 ;
   width: 45px ;
   height: 45px;
-  outline: 1px solid #fff ;
+  outline: 1px solid #1A2E35 ;
   border-radius: 100px ;
 
 }
@@ -148,6 +155,17 @@ body{
     position: absolute;
   left:295px;
 }
+
+#nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5em;
+  padding-right: 5em !important;
+}
+
+
 
 @media (min-width: 393px) {
   #slider-container {
@@ -212,7 +230,6 @@ left:350px;
   
 }
 
-
 @media (min-width: 1024px) {
   #slider-container {
     width:100%;
@@ -237,11 +254,22 @@ left:350px;
 
 }
 
-
 @media (min-width: 1280px) { 
+
+  li {
+    width: 150px !important;
+    font-size: .9em;
+  }
+  
+  
+  ul li:nth-of-type(2) {
+    width: 200px !important;
+    margin-left: -1em;
+  }
+  
     #slider-container {
-    width:1200px;
-    margin-left: 10%;
+    width:100vw;
+    margin-left: 5%;
   }
 
 
@@ -249,8 +277,8 @@ left:350px;
 
   #home-information {
     position: relative;
-    top: 2em;
-    left: 42%;
+    top: 5em;
+    left: 33%;
   }
 
   #home-information  h1{

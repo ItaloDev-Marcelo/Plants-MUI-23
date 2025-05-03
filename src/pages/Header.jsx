@@ -2,7 +2,8 @@ import {Stack, Typography} from '@mui/material'
 
 export default function Header() {
     return (
-      <Stack component='header' id='home-information' padding={{xs: ' .5em 2em'}}>
+      <Stack component='header' id='home-information' marginTop={10}
+       padding={{xs: ' .5em 2em'}}>
          <Typography variant='h1' fontSize={{xs: '2.5em', lg: '3em'}} marginY={1} maxWidth={225} >
              <span id='green'>Go Green</span> <br/>
          <span id='c-2'> The world of plants</span></Typography>

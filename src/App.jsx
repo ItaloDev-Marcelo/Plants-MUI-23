@@ -1,13 +1,15 @@
 //import { useState } from 'react'
 import './App.css'
+import NavegationTab from './components/nav'
 import Header from './pages/Header'
 import Slider from './pages/Slider'
 
 function App() {
-  //const [count, setCount] = useState(0)
 
   return (
     <>
+    
+    <NavegationTab/>
        <Header/>
        <Slider/>
     </>
